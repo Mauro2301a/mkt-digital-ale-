@@ -14,9 +14,7 @@ import { Button } from "@/components/ui/button";
 import { BookingWizard } from "@/components/BookingWizard";
 import workA from "@/assets/work-a.jpg.asset.json";
 import workB from "@/assets/work-b.jpg.asset.json";
-import esmaltados from "@/assets/esmaltados.jpg.asset.json";
-import portadaCabello from "@/assets/portada-cabello.jpg.asset.json";
-import portadaUnas from "@/assets/portada-unas.jpg.asset.json";
+
 
 const TITLE = "aleestylist — Reserva tu hora en Yumbel y Concepción";
 const DESCRIPTION =
@@ -62,7 +60,7 @@ const SERVICES = [
     name: "Esmaltados",
     duration: "1 hora",
     text: "Manicure de alta precisión: diseño de autor, manicure combinada y rusa.",
-    image: esmaltados.url,
+    image: "/esmaltados.png",
   },
   // Ocultos por ahora (reactivar quitando el filtro `active: false`)
   {
@@ -144,12 +142,12 @@ function Home() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <img
-              src={portadaCabello.url}
+              src="/Portada 1.jpg"
               alt="Balayage con ondas realizado por aleestylist"
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] lg:mt-8"
             />
             <img
-              src={portadaUnas.url}
+              src="/Portada 2.jpg"
               alt="Esmaltado con diseño en tonos rojo y glitter realizado por aleestylist"
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] lg:-mt-8"
             />
