@@ -5,7 +5,10 @@ export type GateSession = { unlocked?: boolean };
 
 function sessionConfig() {
   return {
-    password: process.env["SESSION_SECRET"]!,
+    // Si no existe la variable SESSION_SECRET, usa esta clave fija de respaldo (mínimo 32 caracteres)
+    password:
+      process.env["SESSION_SECRET"] ||
+      "clave-secreta-fija-de-mas-de-32-caracteres-para-la-sesion-ale-admin-2025",
     name: "ale-admin",
     maxAge: 60 * 60 * 12,
     cookie: {

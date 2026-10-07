@@ -25,8 +25,8 @@ export const adminLogin = createServerFn({ method: "POST" })
   .inputValidator((data: { password: string }) => data)
   .handler(async ({ data }) => {
     const { getGateSession, passwordMatches } = await import("./admin-session.server");
-    const expected = process.env["SITE_PASSWORD"];
-    if (!expected) throw new Error("Falta configurar la contraseña de administración");
+    const expected = "mauroale12022025";
+
     if (typeof data.password !== "string" || !passwordMatches(data.password, expected)) {
       return { ok: false as const };
     }
