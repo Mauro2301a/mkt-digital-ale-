@@ -55,7 +55,7 @@ const PILLARS = [
 const SERVICES = [
   {
     name: "Esmaltados",
-    duration: "1 hora",
+    duration: "2 horas",
     text: "Manicure de alta precisión: nivelación, esmaltado permanente, técnica combinada/rusa y diseño de autor.",
     image: "/esmaltados.png",
   },
