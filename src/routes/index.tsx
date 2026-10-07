@@ -12,13 +12,10 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { BookingWizard } from "@/components/BookingWizard";
-import workA from "@/assets/work-a.jpg.asset.json";
-import workB from "@/assets/work-b.jpg.asset.json";
 
-
-const TITLE = "aleestylist — Reserva tu hora en Yumbel y Concepción";
+const TITLE = "aleestylist — Manicure & Esmaltados en Yumbel y Concepción";
 const DESCRIPTION =
-  "Esmaltados de alta precisión con diseño de autor y cuidado de la salud de tus uñas. Reserva tu hora online en Yumbel y Concepción. Belleza que habla por ti.";
+  "Esmaltados de alta precisión, manicure combinada, nivelación y diseño de autor cuidando la salud de tus uñas. Reserva tu hora online en Yumbel y Concepción.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,22 +33,22 @@ const PILLARS = [
   {
     icon: ShieldCheck,
     title: "Diagnóstico personalizado",
-    text: "Test de mecha y análisis del estado ungueal antes de cada proceso químico, para garantizar el resultado sin daños.",
+    text: "Evaluación minuciosa del estado y tipo de lámina ungueal antes de cada aplicación para garantizar adherencia y cero daños.",
   },
   {
     icon: Sparkles,
-    title: "Técnicas actualizadas",
-    text: "Balayage, baby highlights, diseño de autor y manicure combinada o rusa, con formación reciente en tendencias.",
+    title: "Técnicas de precisión",
+    text: "Manicure combinada, técnica rusa, nivelación con base rubber, esmaltado permanente y nail art de autor en tendencia.",
   },
   {
     icon: HeartHandshake,
-    title: "Química responsable",
-    text: "Productos con tecnología plex y fórmulas respetuosas con la estructura natural de tus uñas.",
+    title: "Química y productos responsables",
+    text: "Bases niveladoras de alta adhesión, esmaltes de larga duración y fórmulas respetuosas con la estructura natural de tus uñas.",
   },
   {
     icon: Clock3,
     title: "Atención dedicada",
-    text: "Servicio sin prisa, enfocado en el detalle y en tu comodidad durante todo el proceso.",
+    text: "Servicio prolijo y sin prisas, enfocado en el detalle milimétrico, la esterilización y tu comodidad en cada cita.",
   },
 ];
 
@@ -59,23 +56,8 @@ const SERVICES = [
   {
     name: "Esmaltados",
     duration: "1 hora",
-    text: "Manicure de alta precisión: diseño de autor, manicure combinada y rusa.",
+    text: "Manicure de alta precisión: nivelación, esmaltado permanente, técnica combinada/rusa y diseño de autor.",
     image: "/esmaltados.png",
-  },
-  // Ocultos por ahora (reactivar quitando el filtro `active: false`)
-  {
-    active: false,
-    name: "Decoloración",
-    duration: "5 horas",
-    text: "Balayage y baby highlights con test de mecha previo y tecnología plex.",
-    image: workB.url,
-  },
-  {
-    active: false,
-    name: "Coloración",
-    duration: "2 horas",
-    text: "Color a medida, cuidando la integridad de la fibra capilar.",
-    image: workA.url,
   },
 ];
 
@@ -90,7 +72,7 @@ const WHY = [
   {
     icon: HeartHandshake,
     title: "Atención personalizada",
-    text: "Cada servicio se adapta a ti: sin protocolos genéricos, con tiempo real dedicado a tu resultado.",
+    text: "Cada servicio se adapta a ti: sin protocolos genéricos, con tiempo real dedicado a la salud y estética de tus manos.",
   },
   {
     icon: CalendarCheck2,
@@ -100,7 +82,7 @@ const WHY = [
   {
     icon: MapPin,
     title: "Especialista local",
-    text: "Atención en Yumbel, con proyección a Concepción. Esmaltados y diseño de uñas con foco en el detalle.",
+    text: "Atención en Yumbel con proyección a Concepción. Esmaltados y diseño de uñas con foco absoluto en la prolijidad.",
   },
 ];
 
@@ -125,12 +107,12 @@ function Home() {
       <section className="hero-surface px-5 pb-12 pt-12 sm:pb-16 sm:pt-16">
         <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
           <div className="text-center lg:text-left">
-            <p className="eyebrow">Estética en Yumbel y Concepción</p>
+            <p className="eyebrow">Studio de Uñas en Yumbel y Concepción</p>
             <h1 className="mt-4 text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
-              Reserva tu hora de belleza en 1 minuto, sin llamadas ni esperas
+              Reserva tu manicure perfecta en 1 minuto, sin llamadas ni esperas
             </h1>
             <p className="mx-auto mt-4 max-w-md text-base text-muted-foreground lg:mx-0">
-              Esmaltados con diseño de autor y atención personalizada. Elige el día y la hora que
+              Esmaltados con diseño de autor, nivelación y cuidado ungueal dedicado. Elige el día y la hora que
               más te acomoden, directo desde tu celular.
             </p>
             <Button asChild size="lg" className="mt-7 h-14 w-full text-base sm:w-auto sm:px-10">
@@ -142,13 +124,13 @@ function Home() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <img
-              src="/Portada 1.jpg"
-              alt="Balayage con ondas realizado por aleestylist"
+              src="/esmaltados.png"
+              alt="Manicure combinada y esmaltado de alta precisión realizado por aleestylist"
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] lg:mt-8"
             />
             <img
               src="/Portada 2.jpg"
-              alt="Esmaltado con diseño en tonos rojo y glitter realizado por aleestylist"
+              alt="Esmaltado permanente con diseño de autor y acabado profesional por aleestylist"
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] lg:-mt-8"
             />
           </div>
@@ -195,12 +177,10 @@ function Home() {
           <span className="gold-rule block" />
           <h2 className="mt-4 text-3xl sm:text-4xl">Sobre aleestylist</h2>
           <p className="mt-4 font-display text-2xl leading-snug">
-            Tu versión más auténtica, sin comprometer la salud de tu cabello ni de tus uñas.
+            Tu versión más auténtica, cuidando siempre la belleza y salud de tus uñas.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-            Ofrezco transformaciones de color, decoloración y manicure de alta precisión mediante
-            técnicas de vanguardia y un enfoque prioritario en la salud capilar y ungueal. Un
-            servicio personalizado, actualizado en tendencias y adaptado a tu estilo de vida.
+            Especialista en manicure de alta precisión, técnica combinada o rusa, nivelación con bases estructuradas y esmaltado permanente. Cada servicio se realiza con una evaluación exhaustiva de la lámina ungueal, garantizando acabados limpios, duraderos y respetuosos con el crecimiento natural de tus uñas.
           </p>
 
           <div className="mt-8 space-y-3">
@@ -229,7 +209,7 @@ function Home() {
             La duración es informativa y se reserva completa para ti.
           </p>
           <div className="mt-6 space-y-4">
-            {SERVICES.filter((s) => !("active" in s) || s.active !== false).map((s) => (
+            {SERVICES.map((s) => (
               <article
                 key={s.name}
                 className="flex gap-4 overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)]"
